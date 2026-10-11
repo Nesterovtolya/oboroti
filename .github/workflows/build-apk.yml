@@ -18,11 +18,8 @@ jobs:
 
       - name: Install Buildozer
         run: |
-          pip install buildozer cython==0.29.33
-
-      - name: Install legacy-cgi for build environment
-        run: |
-          pip install legacy-cgi
+          pip install git+https://github.com/kivy/buildozer.git@master
+          pip install cython==0.29.33
 
       - name: Build APK
         run: |
